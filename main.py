@@ -10,8 +10,10 @@ from sqlalchemy import text
 from sqlalchemy.orm import Session
 
 from conf.db import get_db
+from conf.db import init_db
 
 app = FastAPI()
+init_db()
 
 BASE_DIR = Path(__file__).parent
 directory = BASE_DIR.joinpath("static")
